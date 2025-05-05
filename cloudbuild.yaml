@@ -18,3 +18,5 @@ steps:
 
 images:
   - 'gcr.io/$PROJECT_ID/somme-python:$COMMIT_SHA'
+options:
+  logging: 'NONE'
