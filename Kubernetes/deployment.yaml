@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: somme-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: somme-app
+  template:
+    metadata:
+      labels:
+        app: somme-app
+    spec:
+      containers:
+        - name: somme-container
+          image: gcr.io/YOUR_PROJECT_ID/somme-python:$COMMIT_SHA
+          imagePullPolicy: Always
