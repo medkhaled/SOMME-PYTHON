@@ -17,7 +17,7 @@ steps:
       - --cluster=my-gke-cluster
 
 images:
-  - 'gcr.io/$PROJECT_ID/somme-python:$COMMIT_SHA'
+  - us-central1-docker.pkg.dev/$PROJECT_ID/somme-python-repo/somme-python:$COMMIT_SHA
 options:
   logging: CLOUD_LOGGING_ONLY
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
